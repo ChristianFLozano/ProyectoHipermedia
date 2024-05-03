@@ -5,18 +5,9 @@ import Caracteristicas from './componentes/Caracteristicas';
 import caracteristicasGitHub from './Caracteristicas';
 import GitInfo from './componentes/GitInfo';
 import Video from './componentes/Video';
-import fetchVideoId from './Youtube';
+import Footer from './componentes/Footer';
 
 function App() {
-    const [videoId, setVideoId] = useState('');
-
-    useEffect(() => {
-        async function getVideoId() {
-            const id = await fetchVideoId();
-            setVideoId(id);
-        }
-        getVideoId();
-    }, []);
 
     return (
         <div>
@@ -35,11 +26,18 @@ function App() {
                 <section className='sectionGit'>
                     <GitInfo /> 
                 </section>
-                <section className='sectionVideo'>
-                    <Video videoId={videoId} />
-                </section>
+                <figure className='sectionFigure'>
+                    <Video/>
+                    <figcaption className='figCaptionDescripcionVideo'>
+                        <p>Este video es una forma de trabajar un proyecto con git, github y vsCode.
+                            <br />Este video es de mi propiedad y se elabora desde la creacion del respositorio
+                            <br />hasta actualizarlo con comando git en visual.
+                        </p>
+                    </figcaption>
+                </figure>
             </main>
-        </div>
+            <Footer />
+       </div>
     );
 }
 

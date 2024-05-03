@@ -158,11 +158,10 @@ header img {
   line-height: 35px;
   font-size: 20px;
 }
-
-.sectionVideo {
-  height: 600px;
+/*Section de video*/
+.sectionFigure {
+  height: 700px;
   background-color: #FAFAFA;
-  display: flex;
   justify-content: center;
   align-items: center;
   font-size: 45px;
@@ -172,4 +171,18 @@ header img {
 iframe {
   width: 900px;
   height: 450px;
+}
+
+.figCaptionDescripcionVideo{
+  font-size: 30px;
+  line-height: 45px;
+}
+
+Footer{
+  height: 200px;  
+  background-color: #101720;
+  color: #F8F8FF;
+  padding: 85px;
+  font-size: 50px;
+  text-align: center;
 }
