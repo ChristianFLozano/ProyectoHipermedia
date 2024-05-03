@@ -1,11 +1,23 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Encabezado from './componentes/Encabezado';
 import Introduccion from './componentes/Introduccion';
 import Caracteristicas from './componentes/Caracteristicas';
 import caracteristicasGitHub from './Caracteristicas';
 import GitInfo from './componentes/GitInfo';
+import Video from './componentes/Video';
+import fetchVideoId from './Youtube';
 
 function App() {
+    const [videoId, setVideoId] = useState('');
+
+    useEffect(() => {
+        async function getVideoId() {
+            const id = await fetchVideoId();
+            setVideoId(id);
+        }
+        getVideoId();
+    }, []);
+
     return (
         <div>
             <Encabezado />
@@ -16,12 +28,15 @@ function App() {
                     {caracteristicasGitHub.map(caracteristica => (
                         <Caracteristicas
                             key={caracteristica.id}
-                            caracteristica={caracteristica} //Estoy pasando todo el objeto
+                            caracteristica={caracteristica}
                         />
                     ))}
                 </section>
                 <section className='sectionGit'>
-                <GitInfo /> 
+                    <GitInfo /> 
+                </section>
+                <section className='sectionVideo'>
+                    <Video videoId={videoId} />
                 </section>
             </main>
         </div>
