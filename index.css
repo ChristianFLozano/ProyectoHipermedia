@@ -1,0 +1,165 @@
+/* Reset de estilos y estilos generales */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #101720;
+  font-family: Arial, sans-serif;
+}
+
+/* Estilos del encabezado */
+.headerPrincipal {
+  background-color: #FBFBFB;
+  padding: 30px; /* Añadido espacio interno al encabezado */
+  font-size: 36px;
+  color: #101720;
+  text-align: center;
+}
+
+header img {
+  height: 125px;
+  width: auto;
+}
+
+/*Estilos del sectionIntro*/
+
+.sectionIntro {
+  min-height: 350px;
+  padding: 30px;
+  background-color: #011222;
+  color: #F8F8FF;
+  line-height: 35px;
+  display: flex; /* Usamos flexbox para los elementos en paralelo */
+  justify-content: space-between; /* Distribuye los elementos de forma equitativa */
+}
+
+.divIntro {
+  width: 45%; /* Ajustamos el ancho para que quepan dos elementos en una fila */
+  height: 100%;
+}
+
+.divIntro p{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 25px;
+  text-align: justify;
+}
+
+.divIntro img{
+  height: 275px;
+  width: auto;
+  border-radius: 50px;
+}
+
+.sectionIntro figure{
+  text-align: center;
+}
+/*Estilos del section caracteristicas*/
+
+.sectionCaracteristicas {
+  background-color: #101720;
+  height: auto; /* Ajustar la altura automáticamente según el contenido */
+  padding: 0;
+  display: flex;
+  overflow-x: scroll; /* Ocultar el desplazamiento horizontal */
+}
+
+.caracteristicas {
+  background-color: #FAFAFA;
+  min-width: 100%;
+  min-height: 100%;
+  margin-right: 5px;
+  padding: 30px;
+  line-height: 60px;
+  text-align: justify;
+  display: flex;
+}
+
+.caracteristicas article {
+  flex: 1; /* El artículo ocupará todo el espacio disponible */
+}
+
+.headerCaracteristicas {
+  display: block;
+  color: #101720;
+  background-color: #FBFBFB;
+  padding: 30px; /* Añadido espacio interno al encabezado */
+  font-size: 36px;
+  color: #101720;
+  text-align: center;
+}
+
+.caracteristicas p {
+  color: #101720;
+  font-size: 40px;
+}
+
+.caracteristicas figure {
+  margin-left: 20px; /* Ajusta el margen para separar la imagen del contenido */
+  margin-top: 80px;
+}
+
+.caracteristicas img {
+  height: 400px;
+  width: auto;
+  border-radius: 99px;
+}
+
+/*Estilos del sectionIntro*/
+.sectionGit{
+  height: 1300px;
+  color: #FAFAFA;
+}
+
+.sectionGit div{
+  display: flex;
+  height: 100%;
+}
+
+.sectionGit aside{
+  background-color: #F05032;
+  height: 95%;
+  width: 25%;
+  padding: 40px 40px;
+  font-size: 25px;
+}
+
+.sectionGit article {
+  width: 100%;
+  padding: 40px 40px;
+  text-align: justify;
+}
+
+.sectionGit article h1 {
+  font-size: 80px;
+  padding: 25px;
+}
+
+.sectionGit article p{
+  font-size: 40px;
+  padding: 30px;
+  line-height: 50px;
+}
+
+.sectionGit figure{
+  width: 300px;
+}
+
+/* Estilos responsivos */
+@media only screen and (max-width: 600px) {
+  header {
+    padding: 20px; /* Ajuste del espacio interno para dispositivos móviles */
+    font-size: 24px; /* Ajuste del tamaño de fuente para dispositivos móviles */
+  }
+  
+  .sectionIntro {
+    flex-direction: column; /* Cambia la dirección del flexbox a columnas en dispositivos móviles */
+  }
+  
+  .divIntro {
+    width: 100%; /* Ajustamos el ancho para que ocupe toda la pantalla en dispositivos móviles */
+    margin-bottom: 20px; /* Añadimos espacio entre los elementos en dispositivos móviles */
+  }
+}
