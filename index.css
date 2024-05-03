@@ -124,6 +124,8 @@ header img {
   width: 25%;
   padding: 40px 40px;
   font-size: 25px;
+  line-height: 40px;
+  overflow-y: scroll  ;
 }
 
 .sectionGit article {
@@ -136,9 +138,14 @@ header img {
   font-size: 80px;
   padding: 25px;
 }
+.sectionGit article h2 {
+  font-size: 60px;
+  padding: 25px;
+}
+
 
 .sectionGit article p{
-  font-size: 40px;
+  font-size: 30px;
   padding: 30px;
   line-height: 50px;
 }
@@ -147,19 +154,7 @@ header img {
   width: 300px;
 }
 
-/* Estilos responsivos */
-@media only screen and (max-width: 600px) {
-  header {
-    padding: 20px; /* Ajuste del espacio interno para dispositivos móviles */
-    font-size: 24px; /* Ajuste del tamaño de fuente para dispositivos móviles */
-  }
-  
-  .sectionIntro {
-    flex-direction: column; /* Cambia la dirección del flexbox a columnas en dispositivos móviles */
-  }
-  
-  .divIntro {
-    width: 100%; /* Ajustamos el ancho para que ocupe toda la pantalla en dispositivos móviles */
-    margin-bottom: 20px; /* Añadimos espacio entre los elementos en dispositivos móviles */
-  }
+.ulCaracteristicaGit{
+  line-height: 35px;
+  font-size: 20px;
 }

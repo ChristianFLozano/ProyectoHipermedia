@@ -1,15 +1,20 @@
 import React from "react";
-
+import comandosGit from "../ComandosGit";
+import ListaGit from "./ListaGit";
+import caracteristicasGit from "../CaracteristicasGit";
 function GitInfo()
 {
     return  <div>
                 <aside>
                     <h2>Comandos de Git</h2>
                     <ul>
-                        <li>git init</li>
-                        <li>git add</li>
-                        <li>git commit</li>
-                        <li>git push</li>
+                        {comandosGit.map(comando =>{
+                            return <ListaGit
+                                key = {comando.key}
+                                comando = {comando.comando}
+                                descripcion = {comando.descripcion}
+                            />
+                        })}
                     </ul>
                 </aside>
                 <article>
@@ -20,13 +25,23 @@ function GitInfo()
                         <h1>¿Que es Git?</h1>
                     </header>
                     <p>
-                    Git es un sistema de control de versiones distribuido de código abierto, 
-                    diseñado para manejar proyectos de cualquier tamaño con rapidez y eficiencia. 
-                    Fue creado por Linus Torvalds en 2005, el mismo creador del kernel de Linux, 
-                    para gestionar el desarrollo del kernel de Linux. Desde entonces, 
-                    Git se ha convertido en uno de los sistemas de control de versiones más populares
-                     y ampliamente utilizados en la industria del desarrollo de software.
+                        Git es un sistema de control de versiones distribuido de código abierto, 
+                        diseñado para manejar proyectos de cualquier tamaño con rapidez y eficiencia. 
+                        Fue creado por Linus Torvalds en 2005, el mismo creador del kernel de Linux, 
+                        para gestionar el desarrollo del kernel de Linux. Desde entonces, 
+                        Git se ha convertido en uno de los sistemas de control de versiones más populares
+                        y ampliamente utilizados en la industria del desarrollo de software.
                     </p>
+                    <h2>Caracteristicas de Git</h2>
+                    <ul className="ulCaracteristicaGit">
+                        {caracteristicasGit.map(caracteristica=>{
+                            return <ListaGit
+                                key = {caracteristica.key}
+                                comando = {caracteristica.caracteristica}
+                                descripcion = {caracteristica.descripcion}
+                            />
+                        })}
+                    </ul>
                 </article>
             </div>
         
