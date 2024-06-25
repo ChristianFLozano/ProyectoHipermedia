@@ -1,6 +1,7 @@
 {
   "name": "my-react-app",
   "private": true,
+  "homepage": "https://ChristianFLozano.github.io/ProyectoHipermedia/build",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
